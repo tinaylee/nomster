@@ -61,3 +61,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #will_paginate for pagination
 gem 'will_paginate', '>=3.1'
+
+#simple_form for user input
+gem 'simple_form'
