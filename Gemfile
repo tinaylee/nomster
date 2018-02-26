@@ -70,3 +70,9 @@ gem 'font-awesome-rails'
 
 #devise for user authentication
 gem 'devise'
+
+#Geocoder for Maps API
+gem 'geocoder'
+
+#Figaro for environment variable
+gem "figaro"
