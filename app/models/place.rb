@@ -1,6 +1,5 @@
 class Place < ApplicationRecord
-  mount_uploader :picture, PictureUploader
-  serialize :pictures, JSON
+  
   belongs_to :user
   has_many :comments
   has_many :photos
