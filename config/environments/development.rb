@@ -6,9 +6,23 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   
   #devise
-  config.action_mailer.default_url_options = { host: 'localhost:3030'}
   
- 
+  
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "example.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV['GMAIL_ADDRESS'],
+    password: ENV['GMAIL_PASSWORD']
+  }
+
+  config.action_mailer.default_url_options = {host: 'localhost:3030'}
+
+
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -32,7 +46,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
