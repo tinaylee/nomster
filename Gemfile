@@ -79,3 +79,6 @@ gem "figaro"
 
 #Carrierwave for images
 gem 'carrierwave', '~> 1.0'
+
+#fog to communicate between Carrierwave and AWS
+gem 'fog-aws'

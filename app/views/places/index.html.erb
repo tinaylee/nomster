@@ -17,13 +17,18 @@
           <small><%= place.comments.last.user.email %></small>
         </blockquote>
       </div>
-  <% end %>
-    <% if place.photos.present? %>
-      <% place.photos.each do |photo| %> 
-        <%= image_tag photo.picture %>
+    <% end %>  
+    <div class="row">
+      <% if place.photos.present? %>
+        <% place.photos.each do |photo| %> 
+          <div class="col-3">
+            <%= image_tag photo.picture %>
+          </div>
+        <% end %>  
       <% end %>
-    <% end %>
-</div>
-<% end %>
+    </div>
+  </div>
+  <% end %>
+  
 
 <%= will_paginate @places %>
